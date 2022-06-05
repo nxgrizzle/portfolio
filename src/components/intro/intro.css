@@ -1,0 +1,21 @@
+.intro-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  opacity: 1 !important;
+
+  height: 50vh;
+  min-height: 375px;
+}
+.intro-container > h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 640px) {
+  .intro-container > h1 {
+    font-size: 7.5vw;
+  }
+}

@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #1f262e;
+  color: #e7eaed;
+}
+
+.App {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.grid--two {
+  grid-template-columns: 400px 3fr;
+}
+.grid--one {
+  grid-template-columns: 1fr;
+}
+.grid--left,
+.grid--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.grid--left {
+  min-height: 410px;
+  height: 50vh;
+  align-items: center;
+  align-self: start;
+  position: sticky;
+  justify-content: flex-end;
+  width: 100%;
+  top: 0;
+}
+.grid--right {
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+}
+.mobile-directions {
+  transition: 0.5s ease-out;
+}
+.grid--right.hidden > div,
+.mobile-directions.hidden {
+  opacity: 0;
+}
+.grid--right > div {
+  opacity: 1;
+  transition: 0.4s ease;
+  padding-bottom: 2rem;
+  width: 100%;
+  scroll-margin-top: -1px;
+}
+.grid--one > .grid--right {
+  margin-left: 20px;
+  max-width: calc(100% - 20px);
+}
+
+.down-arrow {
+  display: inline-block;
+  animation-duration: 0.75s;
+  animation-name: arrow;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #32b7bc;
+}
+.highlight {
+  color: #32b7bc;
+}
+
+@keyframes arrow {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
