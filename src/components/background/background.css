@@ -2,6 +2,7 @@
   position: relative;
 }
 .squares {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -73,21 +74,36 @@
   animation-delay: 5s;
 }
 .square:nth-child(8) {
-  left: 80%;
-  width: 210px;
-  height: 210px;
-  animation-delay: 4s;
+  left: 30%;
+  top: -60px;
+  width: 50px;
+  height: 50px;
+  animation-delay: 15s;
+}
+.square:nth-child(9) {
+  left: 0%;
+  top: -210px;
+  width: 200px;
+  height: 200px;
+  animation-delay: 9s;
+}
+.square:nth-child(10) {
+  left: 20%;
+  top: -30px;
+  width: 20px;
+  height: 20px;
+  animation-delay: 16.5s;
 }
 
 @keyframes squareAnimation {
   0% {
-    transform: translate3d(0, 0, 0) rotate3d(0deg);
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
     opacity: 1;
     border-radius: 0;
   }
 
   100% {
-    transform: translate3d(0, 2500px, 0) rotate(720deg);
+    transform: translate3d(0, 3000px, 0) rotate(720deg);
     opacity: 0;
   }
 }

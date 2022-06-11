@@ -15,9 +15,14 @@ export default function Contact(props) {
     }
   }, [isScrollWithinElement]);
   return (
-    <div id="contact" ref={setContactRef} style={{ height: "200vh" }}>
+    <div id="contact" ref={setContactRef} style={{ height: "101vh" }}>
       <h2 className="subtitle">Contact</h2>
-      <p>Coming soon</p>
+      <p>
+        You can reach me at{" "}
+        <a className="external-link" href="mailto:nxgrizzle@gmail.com">
+          nxgrizzle@gmail.com.
+        </a>
+      </p>
     </div>
   );
 }

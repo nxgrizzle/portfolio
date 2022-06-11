@@ -10,6 +10,9 @@ export default function Background() {
       <li className="square"></li>
       <li className="square"></li>
       <li className="square"></li>
+      <li className="square"></li>
+      <li className="square"></li>
+      <li className="square"></li>
     </ul>
   );
 }

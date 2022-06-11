@@ -24,7 +24,6 @@ function App() {
   const position = useScrollPosition();
   const hidden = position === 0;
   const desktop = windowWidth ? windowWidth >= 1024 : window.innerWidth >= 1024;
-  const showDownArrow = !desktop && hidden;
   return (
     <div className="background">
       <Background />
@@ -42,15 +41,10 @@ function App() {
             setScrollLocation={setScrollLocation}
             scrollPosition={position}
           />
-          <p className={`mobile-directions ${showDownArrow ? "" : "hidden"}`}>
-            About Me <span className="down-arrow">⮟</span>
+          <p className={`directions ${hidden ? "" : "hidden"}`}>
+            See more <span className="down-arrow">&#11167;</span>
           </p>
-
           <About
-            setScrollLocation={setScrollLocation}
-            scrollPosition={position}
-          />
-          <Skills
             setScrollLocation={setScrollLocation}
             scrollPosition={position}
           />

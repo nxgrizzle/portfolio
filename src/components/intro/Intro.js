@@ -21,7 +21,7 @@ export default function Intro(props) {
         Hi, I'm Nicole.
         <br />
         I'm a <span className="highlight">front-end developer</span>
-        <br /> in Atlanta, Georgia. 👋
+        <br /> in Atlanta, Georgia. <span className="wave">👋</span>
       </h1>
     </div>
   );

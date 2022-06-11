@@ -31,8 +31,12 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+.grid--left > *,
+.grid--right > * {
+  z-index: 2;
+}
 .grid--left {
-  min-height: 410px;
+  min-height: 370px;
   height: 50vh;
   align-items: center;
   align-self: start;
@@ -46,11 +50,12 @@ body {
   width: 100%;
   max-width: 600px;
 }
-.mobile-directions {
+.directions {
   transition: 0.5s ease-out;
+  padding-bottom: 0.5rem;
 }
 .grid--right.hidden > div,
-.mobile-directions.hidden {
+.directions.hidden {
   opacity: 0;
 }
 .grid--right > div {
@@ -77,9 +82,11 @@ body {
   font-size: 1.25rem;
   font-weight: bold;
   color: #32b7bc;
+  margin-bottom: 0.5rem;
 }
 .highlight {
   color: #32b7bc;
+  font-weight: bold;
 }
 
 @keyframes arrow {
