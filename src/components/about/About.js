@@ -22,9 +22,12 @@ export default function About(props) {
         I'm a Georgia State University graduate interested in transforming vague
         ideas into interest websites.
         <br />
+        <br />
         Currently, I volunteer for{" "}
         <a href="https://www.democracylab.org/projects/803">Pipeline</a>, an
-        organization dedicated to streamlining the job search process. <br />
+        organization dedicated to streamlining the job search process.
+        <br />
+        <br />
         I'm currently <span className="highlight">looking for a job</span>, so
         please{" "}
         <a href="/#contact" className="highlight">

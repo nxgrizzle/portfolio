@@ -42,7 +42,7 @@ function App() {
             scrollPosition={position}
           />
           <p className={`directions ${hidden ? "" : "hidden"}`}>
-            See more <span className="down-arrow">&#11167;</span>
+            See more <span className="down-arrow">↓</span>
           </p>
           <About
             setScrollLocation={setScrollLocation}

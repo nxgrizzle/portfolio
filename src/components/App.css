@@ -71,6 +71,7 @@ body {
 }
 
 .down-arrow {
+  font-family: sans-serif;
   display: inline-block;
   animation-duration: 0.75s;
   animation-name: arrow;
