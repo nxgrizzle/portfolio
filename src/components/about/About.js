@@ -24,7 +24,7 @@ export default function About(props) {
         <br />
         <br />
         Currently, I volunteer for{" "}
-        <a href="https://www.democracylab.org/projects/803">Pipeline</a>, an
+        <a href="https://www.linkedin.com/company/mypipeline/">Pipeline</a>, an
         organization dedicated to streamlining the job search process.
         <br />
         <br />
