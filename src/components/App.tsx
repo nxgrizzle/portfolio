@@ -1,26 +1,29 @@
 import "./App.css";
-import useScrollPosition from "../hooks/useScrollPosition";
-import useWidth from "../hooks/useWidth";
+import useScrollPosition from "../hooks/useScrollPosition.js";
+import useWidth from "../hooks/useWidth.js";
 import { useState } from "react";
-import Header from "./header/Header";
-import Sidebar from "./sidebar/Sidebar";
-import Resume from "./resume/Resume";
-import Skills from "./skills/Skills";
-import Intro from "./intro/Intro";
-import About from "./about/About";
-import Contact from "./contact/Contact";
-import Projects from "./projects/Projects";
-import Background from "./background/Background";
+import Header from "./header/Header.tsx";
+import Intro from "./intro/Intro.tsx";
+import About from "./about/About.tsx";
+import Contact from "./contact/Contact.tsx";
+import Projects from "./projects/Projects.tsx";
+import Background from "./background/Background.tsx";
+import Resume from "./resume/Resume.tsx";
+import Sidebar from "./sidebar/Sidebar.tsx";
+import React from "react";
+export enum ScrollLocation {
+  Contact = "contact",
+  Intro = "intro",
+  Projects = "projects",
+  Resume = "resume",
+  Title = "title",
+  About = "about",
+}
 function App() {
   const windowWidth = useWidth();
-  const [scrollLocation, setScrollLocation] = useState({
-    contact: false,
-    intro: true,
-    projects: false,
-    resume: false,
-    title: false,
-    about: false,
-  });
+  const [scrollLocation, setScrollLocation] = useState<ScrollLocation>(
+    ScrollLocation.Intro
+  );
   const position = useScrollPosition();
   const hidden = position === 0;
   const desktop = windowWidth ? windowWidth >= 1024 : window.innerWidth >= 1024;

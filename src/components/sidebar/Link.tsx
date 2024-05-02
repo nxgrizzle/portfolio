@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import useElementDimensions from "../../hooks/useElementDimensions";
 export default function Link(props) {
-  const [linkRef, setLinkRef] = useState();
+  const [linkRef, setLinkRef] = useState<HTMLLIElement | null>();
   const dimensions = useElementDimensions(linkRef);
   const width = dimensions ? dimensions[0] : undefined;
   const getId = (name) => {

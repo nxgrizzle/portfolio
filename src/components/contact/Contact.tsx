@@ -1,17 +1,17 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import useIsScrollWithinElement from "../../hooks/useIsScrollWithinElement";
+import { ScrollLocation } from "../App.tsx";
+
 export default function Contact(props) {
-  const [contactRef, setContactRef] = useState();
+  const [contactRef, setContactRef] = useState<HTMLDivElement | null>();
   const isScrollWithinElement = useIsScrollWithinElement(
     props.scrollPosition,
     contactRef
   );
   useEffect(() => {
     if (isScrollWithinElement) {
-      props.setScrollLocation((prev) => ({ ...prev, contact: true }));
-    } else {
-      props.setScrollLocation((prev) => ({ ...prev, contact: false }));
+      props.setScrollLocation(ScrollLocation.Contact);
     }
   }, [isScrollWithinElement]);
   return (

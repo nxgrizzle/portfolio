@@ -2,17 +2,16 @@ import React from "react";
 import "./about.css";
 import useIsScrollWithinElement from "../../hooks/useIsScrollWithinElement";
 import { useState, useEffect } from "react";
+import { ScrollLocation } from "../App.tsx";
 export default function About(props) {
-  const [aboutRef, setAboutRef] = useState();
+  const [aboutRef, setAboutRef] = useState<HTMLDivElement | null>();
   const isScrollWithinElement = useIsScrollWithinElement(
     props.scrollPosition,
     aboutRef
   );
   useEffect(() => {
     if (isScrollWithinElement) {
-      props.setScrollLocation((prev) => ({ ...prev, about: true }));
-    } else {
-      props.setScrollLocation((prev) => ({ ...prev, about: false }));
+      props.setScrollLocation(ScrollLocation.About);
     }
   }, [isScrollWithinElement]);
   return (
@@ -23,17 +22,11 @@ export default function About(props) {
         ideas into interest websites.
         <br />
         <br />
-        Currently, I volunteer for{" "}
-        <a href="https://www.linkedin.com/company/mypipeline/">Pipeline</a>, an
-        organization dedicated to streamlining the job search process.
+        Currently, I work as a software engineer for{" "}
+        <a href="https://www.unwrap.ai/">Unwrap.ai</a>, a startup that uses AI
+        to turn customer feedback into actionable insights.
         <br />
         <br />
-        I'm currently <span className="highlight">looking for a job</span>, so
-        please{" "}
-        <a href="/#contact" className="highlight">
-          contact me
-        </a>{" "}
-        if interested!
       </p>
     </div>
   );

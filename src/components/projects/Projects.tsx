@@ -1,22 +1,22 @@
 import React from "react";
 import "./projects.css";
 import breathr from "../../assets/breathr.png";
-import movie from "../../assets/movie.PNG";
+import movie from "../../assets/movie.png";
 import game from "../../assets/wordgame.png";
 import pipeline from "../../assets/pipeline.png";
 import { useState, useEffect } from "react";
 import useIsScrollWithinElement from "../../hooks/useIsScrollWithinElement";
+import { ScrollLocation } from "../App.tsx";
+
 export default function Projects(props) {
-  const [projectsRef, setProjectsRef] = useState();
+  const [projectsRef, setProjectsRef] = useState<HTMLDivElement | null>();
   const isScrollWithinElement = useIsScrollWithinElement(
     props.scrollPosition,
     projectsRef
   );
   useEffect(() => {
     if (isScrollWithinElement) {
-      props.setScrollLocation((prev) => ({ ...prev, projects: true }));
-    } else {
-      props.setScrollLocation((prev) => ({ ...prev, projects: false }));
+      props.setScrollLocation(ScrollLocation.Projects);
     }
   }, [isScrollWithinElement]);
   return (

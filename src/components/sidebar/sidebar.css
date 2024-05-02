@@ -28,13 +28,13 @@ a {
   padding: 0 0.5rem;
 }
 .git {
-  padding-top: 0.5rem;
+  padding-top: 0.25rem;
 }
 .info,
 .info > a {
-  color: #32b7bc;
+  color: #28b7c6;
   text-decoration: underline;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .link > a {
